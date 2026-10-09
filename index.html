@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller DOM y eventos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="contenedor">
+
+    <h1 id="titulo">Taller de DOM y eventos</h1>
+
+    <p id="mensaje">
+      Presiona el boton para interactuar con la pagina.
+    </p>
+
+    <button id="btnTexto" type="button">
+      Cambiar texto
+    </button>
+
+    <!-- Ejercicio 2: Cambio de apariencia -->
+    <section id="seccionColor" class="panel">
+      <h2>Cambio de apariencia</h2>
+      <p>Usa los botones para cambiar o restaurar el fondo.</p>
+
+      <button id="btnColor" type="button">
+        Cambiar fondo
+      </button>
+
+      <button id="btnRestaurar" type="button">
+        Restaurar fondo
+      </button>
+    </section>
+
+    <!-- Ejercicio 3: Seguimiento de escritura -->
+    <section class="panel">
+      <h2>Seguimiento de escritura</h2>
+
+      <label for="entradaTexto">Escribe algo:</label>
+      <input
+        id="entradaTexto"
+        type="text"
+        placeholder="Escribe aqui"
+      >
+
+      <p>
+        Vista previa:
+        <span id="vistaPrevia">Tu texto aparecera aqui.</span>
+      </p>
+    </section>
+
+    <!-- Ejercicio 4: Lista dinamica -->
+    <section class="panel">
+      <h2>Lista dinamica</h2>
+
+      <label for="nuevoElemento">Nuevo elemento:</label>
+      <input
+        id="nuevoElemento"
+        type="text"
+        placeholder="Ej. Investigar DOM"
+      >
+
+      <button id="btnAgregar" type="button">
+        Agregar a la lista
+      </button>
+
+      <ul id="listaTareas"></ul>
+
+      <p id="mensajeLista" aria-live="polite"></p>
+    </section>
+
+    <!-- Ejercicio 5: Formulario con validacion -->
+    <section class="panel">
+      <h2>Formulario de registro</h2>
+
+      <form id="formRegistro">
+
+        <label for="nombre">Nombre:</label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          required
+          minlength="2"
+        >
+
+        <label for="correo">Correo electronico:</label>
+        <input
+          id="correo"
+          name="correo"
+          type="email"
+          required
+        >
+
+        <label for="contrasena">Contraseña:</label>
+        <input
+          id="contrasena"
+          name="contrasena"
+          type="password"
+          required
+          minlength="6"
+        >
+
+        <button type="submit">
+          Validar formulario
+        </button>
+
+      </form>
+
+      <p id="mensajeFormulario" aria-live="polite"></p>
+    </section>
+
+    <!-- Caso aplicado: busqueda de cursos -->
+    <section class="panel">
+      <h2>Consulta de cursos</h2>
+
+      <label for="buscarCurso">Buscar curso:</label>
+      <input
+        id="buscarCurso"
+        type="search"
+        placeholder="Escribe: JavaScript, HTML o CSS"
+      >
+
+      <ul id="resultadosCursos">
+        <li data-curso="html">HTML basico</li>
+        <li data-curso="css">CSS inicial</li>
+        <li data-curso="javascript">JavaScript y DOM</li>
+      </ul>
+    </section>
+
+    <p class="nota">
+      ASLY NATHALIA MAJIN MAJIN
+    </p>
+
+  </main>
+</body>
+</html>
